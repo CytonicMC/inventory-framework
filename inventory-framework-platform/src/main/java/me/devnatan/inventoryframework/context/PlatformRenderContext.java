@@ -44,7 +44,7 @@ public abstract class PlatformRenderContext<T extends ItemComponentBuilder<T, C>
     private final List<LayoutSlot> layoutSlots = new ArrayList<>();
     private final List<BiFunction<Integer, Integer, ComponentFactory>> availableSlotFactories = new ArrayList<>();
 
-    PlatformRenderContext(
+    public PlatformRenderContext(
             @NotNull UUID id,
             @NotNull PlatformView root,
             @NotNull ViewConfig config,

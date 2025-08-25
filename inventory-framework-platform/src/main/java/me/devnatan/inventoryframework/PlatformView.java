@@ -564,7 +564,7 @@ public abstract class PlatformView<
      *
      * @param initialized The new initialization state.
      */
-    final void setInitialized(boolean initialized) {
+    public final void setInitialized(boolean initialized) {
         this.initialized = initialized;
     }
 
@@ -587,7 +587,7 @@ public abstract class PlatformView<
      * @throws IllegalStateException If this platform view is already initialized.
      */
     @SuppressWarnings("unchecked")
-    final void internalInitialization(IFViewFrame<?, ?> framework) {
+    public final void internalInitialization(IFViewFrame<?, ?> framework) {
         if (isInitialized())
             throw new IllegalStateException("Tried to call internal initialization but view is already initialized");
 
@@ -613,7 +613,7 @@ public abstract class PlatformView<
         pipeline.execute(StandardPipelinePhases.INIT, this);
     }
 
-    abstract void registerPlatformInterceptors();
+    public abstract void registerPlatformInterceptors();
     // endregion
 
     @ApiStatus.Internal
