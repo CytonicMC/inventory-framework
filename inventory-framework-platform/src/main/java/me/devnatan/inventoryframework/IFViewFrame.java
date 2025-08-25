@@ -49,7 +49,7 @@ public abstract class IFViewFrame<S extends IFViewFrame<S, V>, V extends Platfor
      *
      * @return A Map containing all registered views in this view frame.
      */
-    protected final @NotNull @UnmodifiableView Map<UUID, V> getRegisteredViews() {
+    public final @NotNull @UnmodifiableView Map<UUID, V> getRegisteredViews() {
         return Collections.unmodifiableMap(registeredViews);
     }
 
